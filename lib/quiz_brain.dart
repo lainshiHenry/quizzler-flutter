@@ -15,6 +15,19 @@ class QuizBrain {
     }
   }
 
+  bool isFinished() {
+    if (_questionNumber == _questionBank.length - 1) {
+      print('Quiz ended');
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  void resetQuiz() {
+    _questionNumber = 0;
+  }
+
   int _questionNumber = 0;
   List<Question> _questionBank = [
     Question('Some cats are actually allergic to humans', true),
